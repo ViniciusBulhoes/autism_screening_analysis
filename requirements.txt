@@ -2,6 +2,6 @@ streamlit
 pandas
 plotly
 scikit-learn
-imblearn
+imbalanced-learn
 seaborn
 matplotlib
