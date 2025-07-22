@@ -32,7 +32,7 @@ dt.replace('f', 0, inplace=True)
 X = dt.drop("autism", axis=1)
 X = X.drop(columns=['index', 'result'])
 y = dt["autism"]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=64)
 smote = SMOTE()
 X_res, y_res = smote.fit_resample(X_train, y_train)
 model = RandomForestClassifier(n_estimators=500, class_weight='balanced', random_state=64)
