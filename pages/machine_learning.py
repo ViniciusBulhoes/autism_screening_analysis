@@ -29,7 +29,7 @@ dt.rename(columns={'gender':'sexo_M'})
 dt.replace('m', 1, inplace=True)
 dt.replace('f', 0, inplace=True)
 
-X = dt.drop(["autism", "result"], axis=1)
+X = dt.drop("autism", axis=1)
 X = X.drop(columns=['index', 'result'])
 y = dt["autism"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
